@@ -511,6 +511,11 @@ void InitAudioDevice(void)
     AUDIO.System.isReady = true;
 }
 
+unsigned int GetBufferSize(void)
+{
+    return AUDIO.System.device.playback.internalPeriodSizeInFrames * AUDIO.System.device.playback.internalPeriods;
+}
+
 // Close the audio device for all contexts
 void CloseAudioDevice(void)
 {
