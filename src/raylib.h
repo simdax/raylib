@@ -1597,6 +1597,7 @@ RLAPI void CloseAudioDevice(void);                                    // Close t
 RLAPI bool IsAudioDeviceReady(void);                                  // Check if audio device has been initialized successfully
 RLAPI void SetMasterVolume(float volume);                             // Set master volume (listener)
 RLAPI float GetMasterVolume(void);                                    // Get master volume (listener)
+RLAPI unsigned int GetInternalAudioBufferSize(void);                          // Get internal buffer size
 
 // Wave/Sound loading/unloading functions
 RLAPI Wave LoadWave(const char *fileName);                            // Load wave data from file

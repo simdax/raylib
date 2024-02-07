@@ -511,7 +511,7 @@ void InitAudioDevice(void)
     AUDIO.System.isReady = true;
 }
 
-unsigned int GetBufferSize(void)
+unsigned int GetInternalAudioBufferSize(void)
 {
     return AUDIO.System.device.playback.internalPeriodSizeInFrames * AUDIO.System.device.playback.internalPeriods;
 }
