@@ -8,7 +8,7 @@ enum_option(OPENGL_VERSION "OFF;4.3;3.3;2.1;1.1;ES 2.0;ES 3.0" "Force a specific
 
 # Configuration options
 option(BUILD_EXAMPLES "Build the examples." ${RAYLIB_IS_MAIN})
-option(CUSTOMIZE_BUILD "Show options for customizing your Raylib library build." OFF)
+option(CUSTOMIZE_BUILD "Show options for customizing your Raylib library build." ON)
 option(ENABLE_ASAN  "Enable AddressSanitizer (ASAN) for debugging (degrades performance)" OFF)
 option(ENABLE_UBSAN "Enable UndefinedBehaviorSanitizer (UBSan) for debugging" OFF)
 option(ENABLE_MSAN "Enable MemorySanitizer (MSan) for debugging (not recommended to run with ASAN)" OFF)
@@ -73,7 +73,7 @@ cmake_dependent_option(SUPPORT_FILEFORMAT_QOI "Support loading QOI as textures" 
 cmake_dependent_option(SUPPORT_FILEFORMAT_PSD "Support loading PSD as textures" ${OFF} CUSTOMIZE_BUILD OFF)
 cmake_dependent_option(SUPPORT_FILEFORMAT_PKM "Support loading PKM as textures" ${OFF} CUSTOMIZE_BUILD OFF)
 cmake_dependent_option(SUPPORT_FILEFORMAT_PVR "Support loading PVR as textures" ${OFF} CUSTOMIZE_BUILD OFF)
-cmake_dependent_option(SUPPORT_FILEFORMAT_SVG "Support loading SVG as textures" ${OFF} CUSTOMIZE_BUILD OFF)
+cmake_dependent_option(SUPPORT_FILEFORMAT_SVG "Support loading SVG as textures" ON CUSTOMIZE_BUILD ON)
 
 # rtext.c
 cmake_dependent_option(SUPPORT_FILEFORMAT_FNT "Support loading fonts in FNT format" ON CUSTOMIZE_BUILD ON)
